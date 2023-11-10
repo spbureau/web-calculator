@@ -1,0 +1,38 @@
+.calculator {
+}
+
+.screen, .answer {
+  text-align: right;
+ 
+}
+
+.rows {
+  padding: 4px;
+}
+
+.numerals-top, .numerals-middle, .numerals-bottom {
+  padding: 2px;
+}
+
+.numeral {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+}
+
+.action, .operator {
+  margin: 5px;
+}
+
+#zero, #point {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+
+#equalto {
+  width: 160px;
+  height: 60px;
+  margin: 5px;
+}
+

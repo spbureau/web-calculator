@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Calculator</title>
+  <!-- Local -->
+  <link href="styles.css" rel="stylesheet" />
+  <script src="script.js"></script>
+  <!-- External Links: Online -->
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- W3.CSS -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bb0b7468de.js" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Concert One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Sail' rel='stylesheet'>
+  <!-- Internal Styles -->
+</head>
+
+<body>
+  <!-- Main Content -->
+  <div class="container w3-green">
+    <h1>Sistec Quick Solutions</h1>
+    <!-- Buttons to open the offcanvas sidebar for solutions -->
+    <!-- Calculator -->
+    <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#calculator">
+      Calculator
+    </button>
+    
+    <!-- Calculator Box -Offcanvas -->
+    <div class="offcanvas offcanvas-start" id="calculator">
+      <div class="offcanvas-header text-bg-dark">
+        <h2 class="offcanvas-title">Sisq Calculator</h2>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <!-- Canvas Body - Calculator -->
+      <div class="offcanvas-body">
+        <div class="container p-3 my-2 bg-dark text-white rounded calculator">
+          
+          <!-- Display Screen -->
+          <div class="rows container bg-white text-dark rounded">
+            <h2 id="screen" class="screen">0</h2>
+            <h1 id="answer" class="answer">0.00</h1>
+          </div>
+          
+          <!-- Top buttons -->
+          <div class="rows row actions">
+            <button id="ac-button" type="button" class="col btn btn-danger btn-lg action" onclick="ClearScreen()">AC</button>
+            <button id="clear-button" type="button" class="col btn btn-warning btn-lg action" onclick="ClearScreen()">CLR</button>
+            <button id="ans-button" type="button" class="col btn btn-warning btn-lg action">ANS</button>
+            <button id="del-button" type="button" class="col btn btn-secondary btn-lg action">DEL</button>
+          </div>
+
+          <!-- Operators -->
+          <div class="rows row operators">
+            <button id="times" class="col btn btn-outline-secondary btn-lg operator" onclick="TimesPressed()">x</button>
+            <button id="plus" class="col btn btn-outline-secondary btn-lg operator" onclick="PlusPressed()">+</button>
+            <button id="minus" class="col btn btn-outline-secondary btn-lg operator" onclick="MinusPressed()">-</button>
+            <button id="divide" class="col btn btn-outline-secondary btn-lg operator" onclick="DividePressed()">÷</button>
+            <button id="square" class="col btn btn-outline-secondary btn-lg operator" onclick="SquarePressed()">x²</button>
+          </div>
+          
+          <!-- Numerals -->
+          <div class="rows numerals">
+            <!-- Top Row -->
+            <div class="numerals-top row">
+              <button id="seven" type="button" class="col btn btn-lg btn-light text-dark numeral" onclick='SevenPressed()'>7</button>
+              <button id="eight" type="button" class="col btn btn-lg btn-light text-dark numeral" onclick="EightPressed()">8</button>
+              <button id="nine" type="button" class="col btn btn-lg btn-light text-dark numeral" onclick="NinePressed()">9</button>
+            </div>
+            <!-- Middle Row -->
+            <div class="numerals-middle row">
+              <button id="four" type="button" class="col btn btn-lg btn-light text-dark numeral">4</button>
+              <button id="five" type="button" class="col btn btn-lg btn-light text-dark numeral">5</button>
+              <button id="six" type="button" class="col btn btn-lg btn-light text-dark numeral">6</button>
+            </div>
+            <!-- Bottom Row -->
+            <div class="numerals-bottom row">
+              <button id="one" type="button" class="col btn btn-lg btn-light text-dark numeral">1</button>
+              <button id="two" type="button" class="col btn btn-lg btn-light text-dark numeral">2</button>
+              <button id="three" type="button" class="col btn btn-lg btn-light text-dark numeral">3</button>
+            </div>
+          </div>
+          <!-- Zero, point and equals-to -->
+          <div class="rows row zero-equalto">
+            <button id="zero" type="button" class="col-*-3 btn btn-light text-dark btn-lg" onclick="ZeroPressed()">0</button>
+          <button id="point" type="button" class="col-*-3 btn btn-lg btn-light text-dark btn-lg" onclick="PointPressed()">•</button>
+          <button id="equalto" type="submit" class="col-*-6 btn btn-success btn-block btn-lg" onclick="EqualToPressed()">=</button>
+          </div>
+        </div> <!-- Calc Container inside Canvas body-->
+      </div>
+    </div>
+    <!-- End of Calculator Canvas-->
+    
+    
+  </div>
+  
+</body>
+
+</html>
