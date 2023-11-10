@@ -26,18 +26,36 @@
 
 <body>
   <!-- Main Content -->
-  <div class="container w3-green">
+  <div class="welcome">
     <h1>Sistec Quick Solutions</h1>
+    <h3>With Ghana's fast-growing web developers hub.</h3>
+    <h3>What solution would you like to use today?</h3>
+  </div>
+  <!-- Solutions Buttons -->
+  <div class="container solutions">
+    <h2>All Solutions</h2>
     <!-- Buttons to open the offcanvas sidebar for solutions -->
-    <!-- Calculator -->
-    <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#calculator">
-      Calculator
-    </button>
     
-    <!-- Calculator Box -Offcanvas -->
+    <div class="solution sol-row1 row">
+      <!-- Calculator -->
+      <button id="web-calculator" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#calculator">Calculator</button>
+      <!-- Currency Converter -->
+      <button id="web-currency-converter" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#currency-converter">Currency Converter</button>
+    </div>
+    <!-- Solutions Row 2 -->
+    <div class="solution sol-row2 row">
+      <!-- Weather Checker-->
+      <button id="web-weather-checker" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#weather-checker">Weather Checker</button>
+      <!-- Game -->
+      <button id="web-game" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#game">Game Game</button>
+    </div>
+  </div>
+
+    <!-- All Solutions -->
+    <!-- #Calculator -Offcanvas -->
     <div class="offcanvas offcanvas-start" id="calculator">
       <div class="offcanvas-header text-bg-dark">
-        <h2 class="offcanvas-title">Sisq Calculator</h2>
+        <h2 class="offcanvas-title">Web Calculator</h2>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
       </div>
       <!-- Canvas Body - Calculator -->
@@ -98,9 +116,6 @@
       </div>
     </div>
     <!-- End of Calculator Canvas-->
-    
-    
-  </div>
   
 </body>
 
