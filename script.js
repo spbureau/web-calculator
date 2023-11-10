@@ -9,10 +9,15 @@ let operation;
 let answer = "";
 
 
+function ClearAll() {
+  screenValue = "0";
+  answer = "0";
+  document.getElementById("screen").innerHTML = screenValue;
+  document.getElementById("answer").innerHTML = answer;
+}
 
 function ClearScreen(){
   screenValue = "0";
-  answer = "0";
   document.getElementById("screen").innerHTML= screenValue;
   document.getElementById("answer").innerHTML= answer;
 }
