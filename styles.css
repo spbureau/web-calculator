@@ -1,11 +1,14 @@
 /* Home */
 
 .welcome {
-  background-color: #000000;
+  background-color: #001a33;
+  color: white;
+  text-align: center;
 }
-
 .solutions {
-  background-color: #4CBF09;
+  background-color: #001a33;
+  color: white;
+  text-align: center;
 }
 
 .sol {
@@ -50,4 +53,8 @@
   width: 160px;
   height: 60px;
   margin: 5px;
+}
+
+#close-button {
+  color: white;
 }

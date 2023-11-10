@@ -26,37 +26,53 @@
 
 <body>
   <!-- Main Content -->
-  <div class="welcome">
-    <h1>Sistec Quick Solutions</h1>
-    <h3>With Ghana's fast-growing web developers hub.</h3>
-    <h3>What solution would you like to use today?</h3>
+  <div class="">
+    <div class="w3-container welcome">
+      <i class="fa fa-laptop fa-fade"></i>
+      <i class="fa-solid fa-cog fa-spin"></i>
+      <h2>Quick Solutions</h2>
+      <h4>Made by Ghana's fast-growing web developers hub.</h4>
+      <hr />
+    </div>
   </div>
   <!-- Solutions Buttons -->
-  <div class="container solutions">
-    <h2>All Solutions</h2>
-    <!-- Buttons to open the offcanvas sidebar for solutions -->
-    
-    <div class="solution sol-row1 row">
-      <!-- Calculator -->
-      <button id="web-calculator" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#calculator">Calculator</button>
-      <!-- Currency Converter -->
-      <button id="web-currency-converter" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#currency-converter">Currency Converter</button>
-    </div>
-    <!-- Solutions Row 2 -->
-    <div class="solution sol-row2 row">
-      <!-- Weather Checker-->
-      <button id="web-weather-checker" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#weather-checker">Weather Checker</button>
-      <!-- Game -->
-      <button id="web-game" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#game">Game Game</button>
+  <div class="">
+    <div class="w3-container solutions">
+      <h3 class="fa-fade">What app would you like to use today?</h3>
+      <!-- Buttons to open the offcanvas sidebar for solutions -->
+      <div class="solution sol-row1 row">
+        <!-- Calculator -->
+        <button id="web-calculator" type="button" class="col btn btn-lg btn-warning text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#calculator">
+          <i class="fa-solid fa-calculator fa-beat"></i>
+          <br />Calculator</button>
+        <!-- Currency Converter -->
+        <button id="web-currency-converter" type="button" class="col btn btn-lg btn-danger text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#currency-converter">
+          <i class="fa-solid fa-money-check-dollar fa-flip" style="--fa-animation-duration: 3s;" ></i>
+          <br/>Currency Converter</button>
+      </div>
+      <!-- Solutions Row 2 -->
+      <div class="solution sol-row2 row">
+        <!-- Weather Checker-->
+        <button id="web-weather-checker" type="button" class="col btn btn-lg btn-primary text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#weather-checker">
+          <i class="fa-solid fa-cog fa-spin"></i>
+          <br />Weather Checker</button>
+        <!-- Game -->
+        <button id="web-game" type="button" class="col btn btn-lg btn-light text-dark sol" data-bs-toggle="offcanvas" data-bs-target="#game">
+          <i class="fa-solid fa-book fa-bounce"></i>
+          <br/>Game Game</button>
+      </div>
+      <hr />
+      <p>Powered by www.simonpetersgh.org</p>
     </div>
   </div>
+  
 
     <!-- All Solutions -->
     <!-- #Calculator -Offcanvas -->
     <div class="offcanvas offcanvas-start" id="calculator">
       <div class="offcanvas-header text-bg-dark">
         <h2 class="offcanvas-title">Web Calculator</h2>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        <button type="button"  class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
       </div>
       <!-- Canvas Body - Calculator -->
       <div class="offcanvas-body">
