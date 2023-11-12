@@ -6,7 +6,7 @@ let screenValue = "";
 
 let operation = "";
 let previousAnswer = "";
-let answer;
+let answer = 0;
 
 console.log(screenValue);
 
@@ -30,6 +30,16 @@ function ClearScreen(){
   answer = Number(previousAnswer);
   // Output
   document.getElementById("screen").innerHTML= screenValue;
+  document.getElementById("answer").innerHTML= answer;
+}
+
+function AnswerPressed(){
+  if (previousAnswer == "") {
+    previousAnswer = "0";
+    answer = Number(previousAnswer);
+  } else {
+    answer = Number(previousAnswer);
+  }
   document.getElementById("answer").innerHTML= answer;
 }
 
@@ -81,7 +91,14 @@ function PointPressed(){
         screenValue += ".";
       }
   } else {
-    // secondNumber poin test
+    // secondNumber point test
+    let secondNum = screenValue.slice(screenValue.indexOf(operation) + 1);
+    let secondNumberHaPoint = secondNum.includes(".");
+    if (secondNumberHaPoint) {
+      screenValue = screenValue;
+    } else {
+      screenValue +=".";
+    }
   }
   // output 
   document.getElementById("screen").innerHTML= screenValue;
