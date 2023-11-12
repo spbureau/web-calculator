@@ -74,11 +74,16 @@ function ZeroPressed(){
 }
 
 function PointPressed(){
-  if (screenValue.includes(".")) {
+  if (firstNumber == "") {
+    if (screenValue.includes(".")) {
     screenValue = screenValue;
+    } else {
+        screenValue += ".";
+      }
   } else {
-    screenValue += ".";
+    // secondNumber poin test
   }
+  // output 
   document.getElementById("screen").innerHTML= screenValue;
 }
 
@@ -106,29 +111,6 @@ function PlusPressed(){
           }
       }
   }
-  /////
-  /*else if (screenValue == ""){
-    screenValue = "0";
-  }*/ 
-  /*
-  else {
-    // level 1 else
-      if (screenValue.includes("+")){
-        screenValue = screenValue;
-      } else {
-        // level 2 else
-          
-          else if(previousAnswer != ""){
-            firstNumber = previousAnswer;
-            screenValue = previousAnswer + "+";
-            operation = "+";
-          } else {
-            // level 3 else
-            // cut to first if...
-            screenValue = "Syntax error"
-          }
-      }
-  } */
   
   document.getElementById("screen").innerHTML= screenValue;
 }
