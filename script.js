@@ -5,6 +5,7 @@ let secondNumber = "";
 let screenValue = "";
 
 let operation = "";
+let previousAnswers = [];
 let previousAnswer = "";
 let answer = 0;
 
@@ -27,7 +28,7 @@ function ClearScreen(){
   firstNumber = "";
   secondNumber = "";
   operation = "";
-  answer = Number(previousAnswer);
+  previousAnswer = answer.toString();
   // Output
   document.getElementById("screen").innerHTML= screenValue;
   document.getElementById("answer").innerHTML= answer;
@@ -37,20 +38,28 @@ function AnswerPressed(){
   if (previousAnswer == "") {
     previousAnswer = "0";
     answer = Number(previousAnswer);
-  } else {
+  } else if (previousAnswer != "") {
     answer = Number(previousAnswer);
   }
+  
   document.getElementById("answer").innerHTML= answer;
 }
 
 function SevenPressed(){
-  if (screenValue != "0") {
-    screenValue += "7";
-  } else if (screenValue == "0") {
+  if (screenValue == ""){
     screenValue = "7";
+  } else {
+      if (previousAnswer != "") {
+        screenValue = "7";
+        previousAnswer = "";
+      } else {
+        
+        screenValue += "7";
+      } 
   }
-
+  // output
   document.getElementById('screen').innerHTML= screenValue;
+  document.getElementById("screen").innerHTML= previousAnswer;
 }
 
 function EightPressed(){
@@ -132,6 +141,22 @@ function PlusPressed(){
   document.getElementById("screen").innerHTML= screenValue;
 }
 
+
+
+  function PlusAgain(){
+    if (previousAnswer != "") {
+      firstNumber = previousAnswer;
+      operation = "+";
+      //
+      screenValue = "+";
+    } else {
+      
+    }
+    document.getElementById("screen").innerHTML= screenValue;
+    document.getElementById("answer").innerHTML= previousAnswer;
+  }
+  
+// Equal To function 
 function EqualToPressed(){
   if (firstNumber != "" ) {
     secondNumber = screenValue.slice(screenValue.indexOf('+') + 1);
@@ -150,6 +175,18 @@ function EqualToPressed(){
     answer = Number(screenValue);
   }
   document.getElementById("answer").innerHTML= answer;
+  previousAnswer = answer.toString();
+  previousAnswers.push(answer);
   screenValue = answer.toString();
 }
+
+
+// history
+function History(){
+  alert(previousAnswers);
+}
+
+// last edits
+// SevenPressed logic not working
+// issue: to stop adding number to screenValue when 7 or a number is pressed after equal to
 
